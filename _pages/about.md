@@ -45,7 +45,7 @@ Methodology
 Evaluation approach
 ======
 
-Pros and Cons
+Merits and Demerits
 ======
 
 Conclusion
