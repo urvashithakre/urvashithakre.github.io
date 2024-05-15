@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Comprehensive Survey of Recent Drug Discovery Using Deep Learning"
+title: "Comprehensive Survey on Drug-Target Interaction Prediction Using Deep Learning"
 author_profile: true
 redirect_from: 
   - /about/
