@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Comprehensive Survey on Drug-Target Interaction Prediction Using Deep Learning"
+title: "Galactica: A Large Language Model for Science"
 author_profile: true
 redirect_from: 
   - /about/
