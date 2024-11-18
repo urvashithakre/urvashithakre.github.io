@@ -10,26 +10,19 @@ redirect_from:
 Introduction 
 ======
 
-Motivation
+Problem and Vision
 ======
 
 Data Representation
 ====== 
-1. Drug representation  
-2. Target representation 
-
-Drug - Target interaction prediction
-======
-DTIs prediction approaches
+1. Tokenisation 
+2. Working Memory Token
+3. Citation Token
+4. Prompt Pretraining 
 
 Methodology 
-======
-1. Data Preparation 
-2. DTI-CNN pipeline
-3. Convolutional Neural Network Model
-4. Working 
 
-Evaluation approach
+Applications
 ======
 
 Merits and Demerits
