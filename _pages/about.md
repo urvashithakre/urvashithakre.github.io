@@ -48,7 +48,6 @@ The rise of Transformer architectures introduced a shift toward unsupervised lea
 
 
 These models were typically trained using masked language modeling, where certain tokens are hidden and the model learns to reconstruct them. While effective for embedding sequences, they were not optimized for generation.
-</p>
 
 ### 🧬 Autoregressive Models for Protein Generation
 Autoregressive models — like GPT — predict the next token based on previous ones. They are naturally suited for generation tasks.
@@ -92,10 +91,9 @@ ProtGPT2 was trained on UniRef50 (version 2021_04) — a clustered version of Un
 | Validation   | \~4.9 million (10%) |
 
 This dataset spans both known and “dark” proteome regions — sequences with no known structure or function — enabling the model to generalize across a vast protein landscape.
-</p>
 
 ## Byte Pair Encoding (BPE) for Tokenization
-<p align="justify"> Rather than treating each amino acid as a separate token, ProtGPT2 uses a Byte Pair Encoding (BPE) tokenizer — a subword algorithm that learns common amino acid motifs and folds them into reusable building blocks.
+Rather than treating each amino acid as a separate token, ProtGPT2 uses a Byte Pair Encoding (BPE) tokenizer — a subword algorithm that learns common amino acid motifs and folds them into reusable building blocks.
 
 - Vocabulary size: 50,256 tokens
 - Average token: ~4 amino acids
