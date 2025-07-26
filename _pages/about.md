@@ -102,14 +102,15 @@ Rather than treating each amino acid as a separate token, ProtGPT2 uses a Byte P
 This strategy reduces sequence length, improves generalization, and helps the model learn biologically meaningful patterns.
 
 ### ⚙️ Final Model Configuration
+
 | Component   | Description                        |
 |-------------|------------------------------------|
 | Architecture | GPT-2 large (decoder-only)        |
-| Layers       | 36                                 |
-| Parameters   | 738 million                        |
-| Batch Size   | 65,536 tokens per batch            |
-| Optimizer    | Adam (β₁ = 0.9, β₂ = 0.999)        |
-| Hardware     | 128 NVIDIA A100 GPUs for 4 days    |
+| Layers       | 36                                |
+| Parameters   | 738 million                       |
+| Batch Size   | 65,536 tokens per batch           |
+| Optimizer    | Adam (β₁ = 0.9, β₂ = 0.999)       |
+| Hardware     | 128 NVIDIA A100 GPUs for 4 days   |
 
 Unlike masked models focused on classification or embedding, ProtGPT2 was explicitly trained for sequence generation, enabling it to compose entirely new proteins that closely resemble natural ones. To summarize, ProtGPT2 combines a powerful GPT-2 architecture with a massive protein sequence corpus (UniRef50) and a subword-aware BPE tokenizer. Together, these components enable the model to learn the underlying "language" of proteins and generate new sequences that reflect natural structural and functional properties.
 
@@ -120,6 +121,7 @@ Once ProtGPT2 is trained to model the protein language, the next step is generat
 
 Once we’ve trained our model, we need to decide how to generate sequences from it. The model gives us a probability distribution over possible amino acids at each
 step—but how we sample from that distribution dramatically affects the quality of the output.
+
 | Strategy           | Description                                                           | Outcome                              |
 |--------------------|-----------------------------------------------------------------------|--------------------------------------|
 | **Greedy**         | Always selects the most probable amino acid at each step              | Repetitive, low-diversity sequences  |
