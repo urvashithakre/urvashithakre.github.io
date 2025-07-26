@@ -62,24 +62,25 @@ Key autoregressive protein models prior to ProtGPT2 include:
 Building on recent advances in language modeling, ProtGPT2 represents a powerful leap in applying deep learning to protein design. ProtGPT2 is an autoregressive Transformer model with 738 million parameters, based on the GPT-2 architecture. That means it generates outputs sequentially, one token at a time, conditioned only on what came before - perfect for modeling protein sequences. 
 
 Given a protein sequence  
-\( W = \{ w_1, w_2, \dots, w_n \} \),  
+$W = \{ w_1, w_2, \dots, w_n \}$,  
 the model learns to predict the probability of each amino acid conditioned on its preceding tokens:
 
-\[
+$$
 p(W) = \prod_{i=1}^{n} p(w_i \mid w_{<i})
-\]
+$$
 
 The training process minimizes the **negative log-likelihood** over all protein sequences in the dataset:
 
-\[
-L_{\text{CLM}} = - \sum_{k=1}^{|D|} \sum_{i=1}^{|w_k|} \log p_\theta (w_{k,i} \mid w_{k,<i})
-\]
+$$
+L_{\text{CLM}} = - \sum_{k=1}^{|D|} \sum_{i=1}^{|w_k|} \log\, p_\theta(w_{k,i} \mid w_{k,<i})
+$$
 
-Where:  
-- \( w_{k,i} \): i-th amino acid in the k-th protein sequence  
-- \( D \): protein dataset (UniRef50)  
-- \( \theta \): model parameters  
-- \( L_{\text{CLM}} \): CLM loss
+Where:
+
+- $w_{k,i}$: i-th amino acid in the k-th protein sequence  
+- $D$: protein dataset (UniRef50)  
+- $\theta$: model parameters  
+- $L_{\text{CLM}}$: Causal Language Modeling loss
 
 This formulation allows ProtGPT2 to learn complex statistical dependencies — such as conserved motifs and structural sub-patterns — directly from sequence data.
 
@@ -116,14 +117,7 @@ This strategy reduces sequence length, improves generalization, and helps the mo
 
 Unlike masked models focused on classification or embedding, ProtGPT2 was explicitly trained for sequence generation, enabling it to compose entirely new proteins that closely resemble natural ones. To summarize, ProtGPT2 combines a powerful GPT-2 architecture with a massive protein sequence corpus (UniRef50) and a subword-aware BPE tokenizer. Together, these components enable the model to learn the underlying "language" of proteins and generate new sequences that reflect natural structural and functional properties.
 
-img
-
-✨ **Key Features of ProtGPT2**:
-- Unsupervised training on massive protein sequence data  
-- Generates amino acid sequences with realistic frequencies  
-- Predicted to be ~88% globular, reflecting natural folding patterns  
-- Explores previously unseen regions of the protein space  
-- Validated with AlphaFold2, Rosetta, and molecular dynamics  
+![Figure: ProtGPT2](images/ProtGPT_Architecture.png)
 
 
 
