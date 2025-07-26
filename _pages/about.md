@@ -6,8 +6,8 @@ redirect_from:
   - /about/
   - /about.html
 ---
-<p align="justify">
 ## Introduction
+ <p align="justify">
  Proteins are essential molecules responsible for virtually all functions in living organisms. Designing new proteins could lead to breakthroughs in drug development, material science, and synthetic biology. However, this process is traditionally slow, resource-intensive, and highly specialized.
 
 Recent progress in Transformer-based architectures has enabled the implementation of language models capable of generating text with human-like capabilities. Motivated by this success, researchers developed ProtGPT2, a language model trained on the protein space that generates de novo protein sequences following the principles of natural ones.
@@ -15,12 +15,15 @@ Recent progress in Transformer-based architectures has enabled the implementatio
 In this blog, we’ll explore how researchers are rethinking protein design using tools from an entirely different domain — natural language processing. We’ll look at how a language model was trained to generate protein sequences, how well those sequences mimic natural proteins, and what this could mean for the future of biology.
 
 🔍 Whether you’re coming from biology, computer science, or just curious about AI, this post will walk you through the fascinating crossroad where deep learning meets molecular design.
+</p>
 
 
 ## From Language to Biology: A Shared Structure
+<p align="justify">
 Recent breakthroughs in Natural Language Processing (NLP) have demonstrated that large language models (LLMs) can effectively learn the structure, meaning, and composition of human language. These models are trained on vast amounts of text, enabling them to generate coherent paragraphs, translate across languages, and even write poetry.
 
 Interestingly, proteins share a surprisingly similar structure to natural language. Proteins are linear chains of amino acids drawn from a 20-character chemical alphabet. Protein sequences, like natural languages, are information-complete: they store structure and function entirely in their amino acid order with extreme efficiency. Just like words form sentences with grammar, amino acids form structured domains that fold into functional proteins. This analogy has led to the idea of treating protein sequences as a form of language — one where sequence dictates both structure and function.
+</p>
 
 ## Previous Work
 Before ProtGPT2, several models laid the groundwork for applying NLP techniques to biological sequences. These efforts demonstrated that protein sequences could be understood and analyzed through the lens of language modeling — both in supervised and unsupervised settings.
